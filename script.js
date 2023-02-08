@@ -10,10 +10,10 @@ function weather() {
         if (this.status == 404 && this.readyState == 4) {
             error.innerHTML = `<p style="margin-left: 42%;font-size:20px"> Sorry Incorrect City Name <p>`
             document.getElementById("temp").innerHTML = "";
-            document.getElementById("graph").innerHTML = "";
+            document.getElementById("chartBox").innerHTML = "";
         }
         else if (this.status == 200 && this.readyState == 4) {
-
+            document.getElementById("error").innerHTML = ""
             let data = JSON.parse(xhttp.responseText);
             temp.innerHTML = `
 
@@ -47,6 +47,7 @@ function weather() {
                 yaxis.push(data.list[i].main.temp)
 
             }
+          
             const ctx = document.getElementById('myChart');
 
             new Chart(ctx, {
@@ -58,7 +59,7 @@ function weather() {
                         data: yaxis,
                         borderWidth: 1,
                         backgroundColor: ['red', 'blue', 'orange', 'green', 'purple'],
-                        borderColor: ['black']
+                        borderColor: ['black','black','black','black','black']
                     }]
                 },
 
