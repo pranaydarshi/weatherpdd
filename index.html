@@ -15,8 +15,8 @@
 <body>
     <div id="details">
 
-        <h1 >Weather Forecast</h1>
-        <div >
+        <h1>Weather Forecast</h1>
+        <div>
 
             <input type="text" id="city" autocomplete="off" placeholder="Enter City Name Here">
             <button onclick="weather()">Go</button>
@@ -29,11 +29,17 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <table id="table" align="center">
+        <tr>
+            <td>
 
+                <canvas id="myChart" width = "500" height = "400"></canvas>
+            </td>
+        </tr>
+    </table>
 
-    <div id="graph" class = "text-center">
+    <div  class="text-center">
 
-        <canvas id="myChart"></canvas>
     </div>
 
 
